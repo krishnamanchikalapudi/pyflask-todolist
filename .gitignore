@@ -5,6 +5,10 @@
 *.egg-info
 __pycache__
 
+*.bkp
+*.drawio.bkp
+todolist-*.db
+jf-cli.sh
 # sqlite db
 *.db
 
