@@ -373,9 +373,11 @@ jobs:
            jf rt curl "/api/build/${{env.BUILD_NAME}}/${{env.BUILD_ID}}" -o $BUILD_INFO_JSON
            cat $BUILD_INFO_JSON
       # Query build 
-      - name: "Download RBv2 from SaaS Edge"
+      
+      # ref: https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/binaries-management-with-jfrog-artifactory/release-lifecycle-management#download-release-bundle-v2-content
+      - name: "Download RBv2"
         env: 
           BUILD_INFO_JSON: "BuildInfo-${{env.BUILD_ID}}.json"
         run: |
-           jf rbe myApp ${{env.BUILD_NAME}}/${{env.BUILD_ID}} /temp/ 
+           jf rt dl --bundle ${{env.BUILD_NAME}}/${{env.BUILD_ID}} --threads=10
            
