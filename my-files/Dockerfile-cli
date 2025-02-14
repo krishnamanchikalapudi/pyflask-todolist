@@ -8,6 +8,8 @@ WORKDIR /app
 COPY app/. /app/
 WORKDIR /app
 
+RUN pwd
+RUN ls -l
 RUN pip3 install gunicorn
 RUN pip3 install -r test-requirements.txt
 RUN python3 -m compileall .
