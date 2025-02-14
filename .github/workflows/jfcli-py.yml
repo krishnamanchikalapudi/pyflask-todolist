@@ -174,7 +174,6 @@ jobs:
         run: |    
           jf pip install -r test-requirements.txt --build-name=${{env.BUILD_NAME}} --build-number=${{env.BUILD_ID}} --module=${{env.MODULE_NAME}}
           export FLASK_APP=./todolist.py
-          flask fill_db
 
       - name: "Optional: Compile PY code" 
         run: |

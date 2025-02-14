@@ -9,6 +9,7 @@ __pycache__
 *.drawio.bkp
 todolist-*.db
 jf-cli.sh
+my-files/.jfrog/*
 # sqlite db
 *.db
 

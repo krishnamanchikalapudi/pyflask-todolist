@@ -1,8 +1,0 @@
-version: 1
-type: pip
-resolver:
-    repo: krishnam-py-virtual
-    serverId: psazuse
-deployer:
-    repo: krishnam-py-virtual
-    serverId: psazuse
