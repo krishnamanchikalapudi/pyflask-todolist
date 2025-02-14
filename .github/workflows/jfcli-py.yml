@@ -198,9 +198,9 @@ jobs:
         run: |
           docker pull ${{env.RT_REPO_DOCKER_URL}}
 
-      - name: "Package: upload PY artifacts"
-        run: |
-          jf rt u dist/ pypi/ --build-name=${{env.BUILD_NAME}} --build-number=${{env.BUILD_ID}} --module=${{env.MODULE_NAME}}
+      # - name: "Package: upload PY artifacts"
+      #   run: |
+      #     jf rt u dist/ pypi/ --build-name=${{env.BUILD_NAME}} --build-number=${{env.BUILD_ID}} --module=${{env.MODULE_NAME}}
 
       - name: "Package: Docker image list"
         run: |
