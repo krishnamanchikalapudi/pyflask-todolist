@@ -4,14 +4,15 @@ FROM psazuse.jfrog.io/krishnam-docker-virtual/python:3-alpine
 
 RUN apk add build-base
 
-WORKDIR /app
-COPY app/. /app/
-WORKDIR /app
+WORKDIR /code
+COPY ./ /code/
 
 RUN pwd
 RUN ls -l
 RUN pip3 install gunicorn
 RUN pip3 install -r test-requirements.txt
 RUN python3 -m compileall .
-RUN FLASK_APP=app.py
+
+ENV FLASK_APP api.py
+ENV FLASK_ENV development
 CMD [ "flask", "run", "--host", "0.0.0.0"]
