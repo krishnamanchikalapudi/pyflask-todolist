@@ -12,6 +12,9 @@ jf-cli.sh
 my-files/.jfrog/*
 # sqlite db
 *.db
+my-files/scripts-sh/.jfrog/*
+my-files/scripts-sh/org/*
+my-files/scripts-sh/flask-todo/*
 
 # test, build, etc
 build
